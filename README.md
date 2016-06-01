@@ -20,9 +20,9 @@ func main() {
 		"api_key":           "YOUR PROJECT API KEY",
 	}
 	client, err := sentryimporter.NewClient(credentials)
-  if err != nil {
-    panic(err)
-  }
+  	if err != nil {
+    		panic(err)
+  	}
 
 	eventsCh := make(chan sentryimporter.Event)
 	from := time.Now().AddDate(0, -6, 0)
